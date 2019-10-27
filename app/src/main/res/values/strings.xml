@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Haiqal46</string>
+
+    <string-array name="listmusic">
+        <item>Romance no Start</item>
+        <item>Synchronicity</item>
+        <item>Romantic Ikayaki</item>
+        <item>Yubibouenkyo</item>
+        <item>Ima Hanashitai Dareka ga Iru</item>
+    </string-array>
+</resources>

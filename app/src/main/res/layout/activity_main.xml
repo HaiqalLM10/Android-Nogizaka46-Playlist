@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.haiqa.playlistmusic.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/purple"
+        android:scaleType="centerCrop"
+        android:layout_above="@+id/imageBottom"/>
+
+    <TextView
+        android:id="@+id/singerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Nogizaka46 Songs"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/songText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/singerText"
+        android:layout_centerHorizontal="true"
+        android:text="©HaiqalMA"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/layoutSet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <co.mobiwise.library.InteractivePlayerView
+            android:id="@+id/ipv"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_centerInParent="true"
+            app:imageCover="@drawable/logonogi"
+            app:selectedAction1="@drawable/shuffle_selected"
+            app:selectedAction2="@drawable/like_selected"
+            app:selectedAction3="@drawable/replay_selected"
+            app:unselectedAction1="@drawable/shuffle_unselected"
+            app:unselectedAction2="@drawable/like_unselected"
+            app:unselectedAction3="@drawable/replay_unselected" />
+
+        <ImageView
+            android:id="@+id/btnNext"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/ipv"
+            android:background="@drawable/icon_forward" />
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/ipv"
+            android:background="@drawable/icon_back" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/icon_arrow_down" />
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/icon_share" />
+
+    <ImageView
+        android:id="@+id/imageBottom"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#662155"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circle"
+        android:layout_alignTop="@+id/imageBottom"
+        android:layout_marginTop="-30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/control"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/play"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listMusic"
+        android:layout_alignParentBottom="true"
+        android:entries="@array/listmusic"
+        android:layout_width="match_parent"
+        android:layout_height="190dp">
+
+    </ListView>
+
+</RelativeLayout>
